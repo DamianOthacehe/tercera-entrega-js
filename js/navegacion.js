@@ -11,7 +11,7 @@ nav.appendChild(ul);
 
 navegacion.className = "navbar";
 
-const pages = ["Logo", "Index", "Carrito", "Contacto"];
+const pages = ["Logo", "Index", "Carrito"];
 
 for(let i = 0; i<pages.length; i++){
     const li = document.createElement("li");
