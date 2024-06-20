@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* NAVBAR */
+
+.navbar nav {
+    background-color:rgb(213, 245, 213);
+}
+
+
+.navbar nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+/* ENCABEZADO */
+
+h1{
+    text-align: center;
+    background-color: darkkhaki;
+}
+
+h2{
+    text-align: center;
+}
+
+
+/* PRODUCTOS */
+
+.insumos{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.insumos div{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 2px;
+}
