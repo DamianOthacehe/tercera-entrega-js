@@ -12,13 +12,11 @@ const insumos = [
 
 function mostrarLista() {
     insumosDiv.innerHTML = ""; // aca declaro null para que tome el array actualizado y lo muestre luego de la iteracion.
-    let i = 0;
     insumos.forEach(element => {
         let producto1 = document.createElement("div");//Creo un elemento <div>
         let card = `<img src="${element.imagen}" alt="${element.nombre}" style="width: 100px;">
                     <h3>${element.nombre}</h3> <h2>$${element.precio}</h2>
-                    <button onclick = "addToCart(${element.id},1)">Add to cart</button>`;
-        i++;
+                    <button onclick = "addToCart(${element.id},1)">Agregar a mi carrito</button>`;
         producto1.innerHTML = card;
         insumosDiv.appendChild(producto1);
         producto1.style.width = '100px';
@@ -32,7 +30,7 @@ function addToCart(productId, cantidad){//para cuando el producto no existe
     let cart = loadCartFromLocalStorage();
     const insumo = insumos.find(p => p.id === productId);
     if(!insumo){
-        alert("El producto no fue encontrado"); //cambiar por sweet alert o toastify
+        alert("El producto no fue encontrado");
         return;//para que salga de la funcion
     }
     const cartItem = cart.find(item => item.id === productId);
